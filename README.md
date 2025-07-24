@@ -1,10 +1,25 @@
-# RashiClassifier - Sefer HaMitzvot Web Scraper
+# RashiClassifier - Sefer HaMitzvot Analysis Platform
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 
-A Python-based web scraping tool designed to download and organize the complete Sefer HaMitzvot (Book of Commandments) by Rashi from the Hebrew Wikisource. The project systematically downloads all 613 commandments (248 positive and 365 negative) along with supporting content, organizing them into a structured local library for study and analysis.
+A Python-based platform for downloading, organizing, and analyzing the complete Sefer HaMitzvot (Book of Commandments) by Rashi from the Hebrew Wikisource. The project systematically downloads all 613 commandments (248 positive and 365 negative) along with supporting content, organizing them into a structured local library for study and analysis.
+
+**Bonus**: This repository also serves as a learning environment for beginner coders to practice team development skills like writing tickets, opening pull requests, using TDD practices, and AI-first coding principles.
+
+## 🎯 Project Goals
+
+### Primary Objectives
+- **Complete Text Access**: Download and organize the full Sefer HaMitzvot corpus
+- **Structured Analysis**: Provide tools for studying Rashi's commentary and methodology
+- **Research Platform**: Enable academic and religious study of the 613 commandments
+- **Content Organization**: Create a searchable, well-structured local library
+
+### Secondary Benefits
+- **Learning Environment**: Practice modern development practices in a real-world context
+- **Team Collaboration**: Learn Git workflows, TDD, and AI-assisted coding
+- **Open Source Contribution**: Experience contributing to meaningful projects
 
 ## 🚀 Quick Start
 
@@ -13,7 +28,7 @@ A Python-based web scraping tool designed to download and organize the complete 
 pip install -r requirements.txt
 ```
 
-### Installation & Usage
+### Basic Usage
 1. **Generate the preparation file:**
    ```bash
    cd downloader
@@ -27,185 +42,105 @@ pip install -r requirements.txt
 
 ## 📋 Table of Contents
 
-- [Features](#-features)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Configuration](#-configuration)
-- [Technical Details](#-technical-details)
-- [Use Cases](#-use-cases)
+- [Project Overview](#-project-overview)
+- [Content Structure](#-content-structure)
+- [Analysis Tools](#-analysis-tools)
+- [Getting Started](#-getting-started)
+- [Learning Opportunities](#-learning-opportunities)
 - [Contributing](#-contributing)
+- [Technical Documentation](#-technical-documentation)
 - [License](#-license)
 
-## ✨ Features
+## 📖 Project Overview
 
-- **Complete Coverage**: Downloads all 613 commandments plus supporting content
-- **Multi-threaded**: Efficient parallel downloading with configurable concurrency
-- **Recovery Mode**: Resume interrupted downloads without duplication
-- **Content Cleaning**: Automatic removal of Wikisource navigation artifacts
-- **Structured Output**: Organized directory hierarchy matching original structure
-- **Progress Tracking**: Real-time download progress and statistics
-- **Error Handling**: Robust error handling with detailed logging
+### What is Sefer HaMitzvot?
+Sefer HaMitzvot (Book of Commandments) is Rashi's systematic enumeration and explanation of the 613 commandments found in the Torah. It serves as a fundamental text for understanding Jewish law and Rashi's interpretive methodology.
+
+### What This Project Does
+- **Downloads** the complete text from Hebrew Wikisource
+- **Organizes** content into logical categories (positive/negative commandments, principles, etc.)
+- **Provides** a foundation for analysis and study tools
+- **Enables** research into Rashi's commentary patterns and structures
 
 ## 📁 Project Structure
 
-```
-RashiClassifier/
-├── downloader/                      # Download functionality module
-│   ├── __init__.py                 # Package initialization
-│   ├── download_sefer_hamitzvot.py # Main downloader script
-│   ├── generate_prep_file.py       # URL generation and prep file creator
-│   ├── sefer_hamitzvot_prep.json  # Generated URL and metadata file
-│   └── README.md                   # Downloader documentation
-├── analyzer/                        # Analysis functionality module (future)
-│   ├── __init__.py                 # Package initialization
-│   └── README.md                   # Analyzer documentation
-├── requirements.txt                 # Python dependencies
-├── README.md                        # This documentation
-├── .gitignore                       # Git ignore patterns
-└── content/                         # Downloaded content directory
-    ├── index.txt                    # Complete file index
-    ├── מצוות_עשה/                   # Positive commandments (248 files)
-    ├── מצוות_לא_תעשה/               # Negative commandments (365 files)
-    ├── שרשים/                       # Root principles (14 files)
-    ├── הקדמה/                       # Introduction content
-    ├── פתיחה/                       # Opening content
-    ├── מקורות/                      # Sources and references
-    └── קישורים_חיצוניים/           # External links
-```
+**Core Modules:**
+- `downloader/` - Content acquisition from Wikisource
+- `analyzer/` - Text analysis and research tools (future)
+- `content/` - Organized Sefer HaMitzvot corpus
 
-## 🔧 Installation
+**Documentation:**
+- `TECHNICAL_DOCUMENTATION.md` - Implementation details
+- `LEARNING_OBJECTIVES.md` - Learning goals (secondary)
 
-### Requirements
-- Python 3.8 or higher
-- Internet connection for downloading content
+## 🔍 Analysis Tools
 
-### Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/RashiClassifier.git
-   cd RashiClassifier
-   ```
+### Current Capabilities
+- **Content Download**: Complete Sefer HaMitzvot corpus
+- **Structured Organization**: Logical categorization of commandments
+- **Text Processing**: Clean, searchable Hebrew text files
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Planned Analysis Features
+- **Text Analysis**: Pattern recognition in Rashi's commentary
+- **Commandment Classification**: Automated categorization and tagging
+- **Statistical Analysis**: Frequency and relationship analysis
+- **Search and Query**: Advanced text search capabilities
+- **Data Visualization**: Charts and graphs of commandment relationships
 
-## 📖 Usage
+## 🛤️ Learning Opportunities
 
-### Basic Usage
-The project operates in two phases:
+While the primary goal is Rashi analysis, this project also provides an excellent environment for learning modern development practices:
 
-1. **Preparation Phase**: Generate the URL and metadata file
-2. **Download Phase**: Download and organize the content
+### For Beginner Coders
+- **Git Workflow**: Practice branching, commits, and pull requests
+- **Test-Driven Development**: Learn TDD with real features
+- **AI-First Coding**: Use AI assistants for development
+- **Team Collaboration**: Work with others through code reviews
 
-### Step-by-Step Guide
+### For Researchers
+- **Data Processing**: Learn text analysis and NLP techniques
+- **Academic Computing**: Practice research-oriented programming
+- **Documentation**: Write clear, scholarly documentation
 
-1. **Generate Preparation File**
-   ```bash
-   cd downloader
-   python generate_prep_file.py
-   ```
-   This creates `sefer_hamitzvot_prep.json` containing all target URLs.
+## 🤝 Contributing
 
-2. **Download Content**
-   ```bash
-   python download_sefer_hamitzvot.py
-   ```
-   This downloads all content and organizes it into the `../content/` directory.
+We welcome contributions from both researchers and learners!
 
-### Recovery Mode
-If downloads are interrupted, you can resume:
-```bash
-python download_sefer_hamitzvot.py --recovery
-```
+### For Researchers & Scholars
+1. **Identify Analysis Needs**: What aspects of Rashi's work need study?
+2. **Propose Features**: Suggest new analysis tools or capabilities
+3. **Implement Analysis**: Build tools for text analysis and research
+4. **Document Findings**: Share insights and research results
 
-## ⚙️ Configuration
+### For Learners
+1. **Fork the repository** and clone it to your local machine
+2. **Create a feature branch** for your work
+3. **Write tests first** following TDD principles
+4. **Implement your feature** with AI assistance if needed
+5. **Open a pull request** with a clear description
+6. **Respond to feedback** and iterate on your code
 
-### Download Settings
-- **Concurrent Downloads**: Adjustable worker threads (default: 5)
-- **Rate Limiting**: Built-in delays to respect server resources
-- **Recovery Mode**: Skip existing files to resume interrupted downloads
+### Code of Conduct
+- Be respectful and supportive of all contributors
+- Provide constructive, helpful feedback
+- Encourage questions and learning
+- Celebrate progress and achievements
 
-### Customization
-You can modify the following parameters in the scripts:
-- `max_workers`: Number of concurrent download threads
-- `delay`: Delay between requests (in seconds)
-- `prep_file_path`: Path to the preparation file
+## 📚 Resources
 
-## 🏗️ System Architecture
+### Essential Reading
+- [TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md) - Technical implementation details
+- [LEARNING_OBJECTIVES.md](LEARNING_OBJECTIVES.md) - Learning goals and exercises (secondary)
+- [downloader/README.md](downloader/README.md) - Module-specific documentation
 
-The RashiClassifier project consists of two main modules: the **downloader** module for content acquisition and the **analyzer** module for content analysis (future development).
-
-### Overall Project Structure
-
-```mermaid
-graph TB
-    subgraph "RashiClassifier Project"
-        A[RashiClassifier] --> B[downloader/]
-        A --> C[analyzer/]
-        A --> D[content/]
-    end
-    
-    subgraph "Module Responsibilities"
-        B --> E[Content Acquisition]
-        C --> F[Content Analysis]
-        D --> G[Structured Data]
-    end
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-```
-
-### Downloader Module Architecture
-
-```mermaid
-graph TB
-    subgraph "Downloader Module"
-        A[downloader/] --> B[generate_prep_file.py]
-        A --> C[download_sefer_hamitzvot.py]
-        A --> D[sefer_hamitzvot_prep.json]
-    end
-    
-    subgraph "Data Flow"
-        B --> D
-        D --> C
-        C --> E[Downloaded Content]
-        E --> F[Organized Directory Structure]
-    end
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-```
-
-## 🛠️ Technical Details
-
-### Content Processing
-- **Text Extraction**: Uses BeautifulSoup for HTML parsing
-- **Content Cleaning**: Regex-based removal of navigation elements
-- **Encoding**: UTF-8 Hebrew text preservation
-- **File Organization**: Automatic directory creation and file categorization
-
-### Performance
-- **Concurrent Downloads**: Configurable thread pool (default: 5 workers)
-- **Rate Limiting**: Built-in delays to prevent server overload
-- **Memory Efficient**: Streaming downloads with minimal memory footprint
-- **Resume Capability**: Skip existing files in recovery mode
-
-### Dependencies
-- `requests`: HTTP requests and session management
-- `beautifulsoup4`: HTML parsing and content extraction
-- `pathlib`: Cross-platform path handling
-- `concurrent.futures`: Multi-threaded execution
-
+### Research Context
+- **Sefer HaMitzvot**: Understanding Rashi's systematic approach to commandments
+- **Rashi's Methodology**: Study of his commentary patterns and techniques
+- **Jewish Law**: Context for the 613 commandments and their organization
 
 ## 🙏 Acknowledgments
 
 - Hebrew Wikisource for hosting the Sefer HaMitzvot content
 - Rashi (Rabbi Shlomo Yitzchaki) for the original work
 - The open source community for the tools that made this project possible
+- All contributors who help advance both research and learning goals
