@@ -21,6 +21,7 @@ A Python-based platform for downloading, organizing, and analyzing the complete 
 - **Team Collaboration**: Learn Git workflows, TDD, and AI-assisted coding
 - **Open Source Contribution**: Experience contributing to meaningful projects
 
+
 ## 🚀 Quick Start
 
 ### Prerequisites
